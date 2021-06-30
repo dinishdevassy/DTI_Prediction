@@ -1,0 +1,49 @@
+----------------
+conda install -c conda-forge scikit-learn
+conda install -c anaconda nltk
+conda install -c anaconda biopython
+conda install -c anaconda networkx
+pip install propy3
+conda install -c conda-forge openbabel
+
+
+Download drug file - DB00035
+https://go.drugbank.com/structures/small_molecule_drugs/DB00035.mol
+
+openbabel:-
+https://openbabel.org/docs/dev/Fingerprints/intro.html
+https://openbabel.org/docs/dev/FileFormats/Fingerprint_format.html#fingerprint-format
+
+obabel -:"[H]C(N)(COP(O)(=O)OCC([H])(COC(=O)CCC\C=C/C\C=C/C\C=C/C\C=C/C\C=C/CC)OC(=O)CCCC\C=C/C\C=C/C\C=C/C\C=C/C\C=C/CC)C(O)=O" -ofpt -xs -xf FP2
+obabel -:"CC(Cl)(Cl)Cl" -ofpt -xs -xf FP2
+obabel -:"N12CCC36C1CC(C(C2)=CCOC4CC5=O)C4C3N5c7ccccc76" -ofpt -xs -xf FP2
+256 bit hexadecimal fp2
+obabel -:"N12CCC36C1CC(C(C2)=CCOC4CC5=O)C4C3N5c7ccccc76" -ofpt -xh -xfFP2
+
+protien analysis
+https://biopython.org/docs/1.75/api/Bio.SeqUtils.ProtParam.html
+
+Bipartite graph reference
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7336396/
+
+https://propy3.readthedocs.io/en/latest/PseudoAAC.html
+
+Drug
+----
+256 bit fp2 from smiles
+http://www.dalkescientific.com/writings/diary/archive/2008/06/27/generating_fingerprints_with_openbabel.html
+
+
+https://towardsdatascience.com/how-to-use-machine-learning-for-drug-discovery-1ccb5fdf81ad
+dataset
+----------
+https://raw.githubusercontent.com/dataprofessor/data/master/delaney.csv
+
+SMOTE
+----------
+https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/
+https://www.google.com/search?q=imblearn+smote&oq=imblearn+s&aqs=chrome.1.69i57j0l9.32422j0j7&sourceid=chrome&ie=UTF-8
+
+Random Forest
+-------------------
+#https://towardsdatascience.com/random-forest-in-python-24d0893d51c0
