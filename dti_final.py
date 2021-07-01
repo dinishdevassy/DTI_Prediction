@@ -152,7 +152,6 @@ for block in open(filename).read().split("\n>"):
     print(hex(union_bits))
     print(len(hex(union_bits)[2:-1]), "bytes")
     fingerprint.append(int(str(union_bits)[0:240]))
-    #print("-------------------")
 print(fingerprint)
 #print(len(fingerprint),len(fingerprint[0]))
 #print( list(fingerprint[0]) )
@@ -854,7 +853,7 @@ for block in open(filename).read().split("\n>"):
     union_bits |= fp
     count+=1
     #print(union_bits)
-# This should start "0x1" if the first 3 bits are 0
+
     #print(hex(union_bits))
     #print(len(hex(union_bits)[2:-1]), "bytes")
     testfingerprint.append(int(str(union_bits)[0:240]))
